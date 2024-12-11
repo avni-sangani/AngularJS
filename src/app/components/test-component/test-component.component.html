@@ -1,0 +1,28 @@
+<p>test-component works!</p>
+
+<div class="container ">
+    <form class="form ">
+        <div class="row">
+            <div class="col-6">
+                <label>Email : </label>
+            </div>
+            <div class="col-6">
+                <input type="email" name="email" [(ngModel)]="email"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-right">
+                <label>Password : </label>
+            </div>
+            <div class="col-6">
+                <input type="password" name="password" [(ngModel)]="password" minlength="8"/>
+            </div>
+        </div>
+        <button >Submit</button>
+    </form>
+</div>
+
+<p>Output</p>
+
+<p>Email :- {{email}}</p>
+<p>Password :- {{password}}</p>

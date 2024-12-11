@@ -1,0 +1,18 @@
+<p>ng-for works!</p>
+
+<div class="row">
+    <div class="col-3" [ngClass]="divBgColor">
+        <ul >
+            <li *ngFor="let city of cityList">
+                {{ city}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-3" >
+        <p [ngStyle]="{'background-color':div1BgColor}">ngStyle</p>
+        <button type="button" (click)="addStyle('green')">Change Style</button>
+
+    </div>
+
+    <button type="button" (click)="changeBg('bg-success')">Change Color</button>
+</div>

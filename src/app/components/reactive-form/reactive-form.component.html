@@ -1,0 +1,50 @@
+<div class="container">
+    <form class="row g-3" novalidate (ngSubmit)="onUserSave()"
+        [formGroup]="userForm">
+        <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">First
+                name</label>
+            <input type="text" formControlName="firstName" class="form-control"
+                id="validationCustom01" value="Mark">
+            <div class="text-danger">
+                @if(userForm.controls['firstName'].errors?.['required'] &&
+                userForm.controls['firstName'].touched){
+                <span>This is required</span>
+                }
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Last name</label>
+            <input type="text" formControlName="lastName" class="form-control">
+            @if(userForm.controls['lastName'].touched){
+            <div class="text-danger">
+                @if(userForm.controls['lastName'].errors?.['required']){
+                <span>This is required</span>
+                }
+                @if(userForm.controls['lastName'].errors?.['minlength']){
+                <span>Min char 4</span>
+                }
+
+            </div>
+            }
+        </div>
+        <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">City</label>
+            <input type="text" formControlName="city" class="form-control">
+            
+        </div>
+        <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">State</label>
+            <select class="form-select" formControlName="state">
+                <option selected disabled value>Choose...</option>
+                <option value="Gujrat">Gujrat</option>
+                <option value="Goa">Goa</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+        </div>
+
+        <div class="col-12">
+            <button class="btn btn-primary" [disabled]="!userForm.valid" type="submit">Submit form</button>
+        </div>
+    </form>
+</div>

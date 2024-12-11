@@ -1,0 +1,28 @@
+
+<button class="btn btn-success" (click)="navigateToAdmin()">Go To Admin</button>
+<div class="row">
+    <div class="col-6">
+        1.Interpolation
+        <p>firstname =>  {{firstName}}</p>
+        <div>{{rollNo}}</div>
+        <span>{{isActive}}</span>
+    </div>
+    <div class="col-6">
+        2.Property Binding
+
+        <input type="text" [value]="firstName" name="" id="">
+        <br>
+        <div [class]="div1ClassName" style="height: 50px;width: 50px;"></div>
+    </div>
+    <div class="col-6">
+        3.event Binding
+
+        <button type="button" (click)="showMeMessage()">Show me alert</button>
+    </div>
+    <div class="row">
+        Two Way Data Binding
+        <input type="text" [(ngModel)]="firstName" name="" id="">
+
+    </div>
+
+</div>
