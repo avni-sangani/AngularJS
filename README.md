@@ -1,4 +1,4 @@
-# Hosting link
+# Link to the hosted site
 
 https://angular-course-website.web.app
 
